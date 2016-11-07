@@ -1,0 +1,36 @@
+﻿<html lang="en" class="app" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments/css::css"></head>
+<body>
+<div class="modal-over" xmlns:th="http://www.thymeleaf.org">
+    <div class="modal-center animated fadeInUp text-center" style="width:300px;height:250px;margin:-150px">
+        <div class="thumb-md form-group"><img th:src="@{/images/avatar.jpg}" class="img-circle b-a b-light b-3x"/></div>
+        <form method="post" role="form" action="/login">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="Username"
+                           autocomplete="off" th:value="${username}"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <i class="fa fa-key"></i>
+                    </div>
+                    <input type="password" class="form-control" name="userPwd" id="password" placeholder="Password"
+                           autocomplete="off"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block btn-login">
+                    <i class="fa fa-sign-in"></i>
+                    登录
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
